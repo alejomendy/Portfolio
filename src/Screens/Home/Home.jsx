@@ -1,5 +1,6 @@
 import React from "react";
 import "../../Styles/main.css";
+import perfil from "../../assets/imageperfil.jpg"; // Importa la imagen correctamente
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
 
       <section className="hero" id="about">
         <img
-          src="https://i.pravatar.cc/150?img=12"
+          src={perfil} 
           alt="Foto de perfil"
           className="avatar"
         />
