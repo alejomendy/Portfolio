@@ -1,8 +1,37 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../../Styles/main.css";
-import perfil from "../../assets/imageperfil.jpg"; // Importa la imagen correctamente
+import perfil from "../../assets/imageperfil.jpg";
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  // Datos de los proyectos
+  const projects = [
+    {
+      id: 1,
+      title: "Shinobi Data",
+      description: "Sitio web en el cual puede encontrar informacion sobre los personajes del anime Naruto.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW4jeoGwEg75bRG24mFbBLgsv9nOU6dbI2eQ&s"
+    },
+    {
+      id: 2,
+      title: "Aplicación de Ejercicio",
+      description: "App móvil para seguimiento de entrenamientos y progreso físico.",
+      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600"
+    },
+    {
+      id: 3,
+      title: "Próximamente...",
+      description: "",
+      image: "https://cdn.pixabay.com/photo/2017/08/04/05/37/coming-soon-2579123_1280.jpg"
+    }
+  ];
+
+  const handleProjectClick = (projectId) => {
+    navigate(`/proyecto/${projectId}`);
+  };
+
   return (
     <div className="portfolio">
       <header className="header">
@@ -54,27 +83,18 @@ export default function Home() {
       <section className="projects" id="projects">
         <h2>Proyectos Destacados</h2>
         <div className="project-cards">
-          <div className="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW4jeoGwEg75bRG24mFbBLgsv9nOU6dbI2eQ&s" alt="Proyecto 1" />
-            <h3>Shinobi Data</h3>
-            <p>
-              Sitio web en el cual puede encontrar informacion sobre los
-              personajes del anime Naruto.
-            </p>
-          </div>
-          <div className="card">
-            <img src="https://cdn.pixabay.com/photo/2017/08/04/05/37/coming-soon-2579123_1280.jpg" alt="Proyecto 2" />
-            <h3>...</h3>
-            <p>
-              
-            </p>
-          </div>
-          <div className="card">
-            <img src="https://cdn.pixabay.com/photo/2017/08/04/05/37/coming-soon-2579123_1280.jpg" alt="Proyecto 3" />
-            <h3>...</h3>
-            <p>
-            </p>
-          </div>
+          {projects.map((project) => (
+            <div 
+              key={project.id} 
+              className="card"
+              onClick={() => handleProjectClick(project.id)}
+              style={{ cursor: 'pointer' }}
+            >
+              <img src={project.image} alt={project.title} />
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
