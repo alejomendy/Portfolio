@@ -6,20 +6,20 @@ import homeview from '../../assets/homeview.png';
 import detailview from '../../assets/detailview.png';
 
 export default function ProjectDetails() {
-  const { id } = useParams(); // Obtiene el ID del proyecto desde la URL
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('descripcion');
 
-  // Datos de los proyectos (puedes moverlos a un archivo separado o traerlos de una API)
   const projectsData = {
     1: {
       title: "Shinobi Data",
       description: "Sitio web completo donde puedes encontrar información detallada sobre los personajes del anime Naruto.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW4jeoGwEg75bRG24mFbBLgsv9nOU6dbI2eQ&s",
-      technologies: ["JavaScript", "React", "Node.js", "API REST"],
+      technologies: ["Typescript", "Sass", "Firebase", "API REST"],
       developers: "Alejo Mendizabal",
       gallery: [homeview, characterview, detailview ],
-      code: "https://github.com/N-KILL/shinobi-data-react"
+      code: "https://github.com/N-KILL/shinobi-data-react",
+      ver: "https://github.com/N-KILL/shinobi-data-react/branches"
     },
     2: {
       title: "Aplicación de Seguimiento de Ejercicio",
@@ -48,7 +48,6 @@ export default function ProjectDetails() {
 
   return (
     <div className="project-details-container">
-      {/* Header */}
       <header className="header">
         <div className="logo">AM</div>
         <div className="glass-menu">
@@ -57,14 +56,10 @@ export default function ProjectDetails() {
           <a href="/#contact">Contacto</a>
         </div>
       </header>
-
-      {/* Main Content */}
       <div className="content">
         <h1 className="page-title">
           Detalles del Proyecto: {project.title}
         </h1>
-
-        {/* Hero Section with Main Image */}
         <div className="hero-section">
           <div className="main-image-container">
             <img 
@@ -84,7 +79,6 @@ export default function ProjectDetails() {
           </div>
         </div>
 
-        {/* Tabs */}
         <div className="tabs-container">
           <button 
             className={`tab-button ${activeTab === 'descripcion' ? 'active' : ''}`}
@@ -107,8 +101,6 @@ export default function ProjectDetails() {
             </button>
           )}
         </div>
-
-        {/* Tab Content */}
         <div className="tab-content">
           {activeTab === 'descripcion' && (
             <div className="description-section">
@@ -158,26 +150,22 @@ export default function ProjectDetails() {
             </div>
           )}
         </div>
-
-        {/* Action Buttons */}
         <div className="action-buttons">
-          <button className="primary-button">
-            Ver Demo
-          </button>
+         <Link to={project.ver}>
+            <button  className="primary-button">
+              Ver Código
+            </button>
+          </Link>
           <Link to={project.code}>
             <button  className="secondary-button">
               Ver Código
             </button>
           </Link>
         </div>
-
-        {/* Back Link */}
         <div className="back-link">
           <Link to="/">← Volver al Portafolio</Link>
         </div>
       </div>
-
-      {/* Footer */}
       <footer className="footer">
         © 2025 Alejo Mendizabal. Todos los derechos reservados.
       </footer>

@@ -1,9 +1,8 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Screens/Home/Home.jsx";
-import ProjectDetails from "./Screens/CardDetails.jsx/CardDetail.jsx";
+import ProjectDetails from "../src/Screens/CardDetails.jsx/CardDetail.jsx";
 
-// Definimos las rutas
 const router = createBrowserRouter([
   {
     path: "/",

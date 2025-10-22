@@ -5,8 +5,6 @@ import perfil from "../../assets/imageperfil.jpg";
 
 export default function Home() {
   const navigate = useNavigate();
-
-  // Datos de los proyectos
   const projects = [
     {
       id: 1,
@@ -65,13 +63,15 @@ export default function Home() {
         <h2>Habilidades</h2>
         <div className="skill-list">
           {[
-            "JavaScript",
+            "Typescript",
             "React",
             "Node.js",
-            "TypeScript",
+            "Firebase",
             "CSS",
             "Flutter",
             "PostgreSQL",
+            "Dart",
+            
           ].map((skill) => (
             <span key={skill} className="skill">
               {skill}
