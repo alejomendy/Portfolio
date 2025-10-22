@@ -1,19 +1,16 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./Screens/Home/Home.jsx";
-import ProjectDetails from "../src/Screens/CardDetails.jsx/CardDetail.jsx";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/proyecto/:id",
-    element: <ProjectDetails />,
-  },
-]);
+import ProjectDetails from "./Screens/CardDetails/ProjectDetail.jsx"; // ajusta según tu ruta real
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/proyecto/:id" element={<ProjectDetails />} />
+      </Routes>
+    </HashRouter>
+  );
 }
+
