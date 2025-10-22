@@ -18,21 +18,16 @@ export default function ProjectDetails() {
       technologies: ["Typescript", "Sass", "Firebase", "API REST"],
       developers: "Alejo Mendizabal",
       gallery: [homeview, characterview, detailview ],
-      code: "https://github.com/N-KILL/shinobi-data-react",
-      ver: "https://github.com/N-KILL/shinobi-data-react/branches"
+      code: "https://github.com/alejomendy/Portfolio",
+      ver: ""
     },
     2: {
-      title: "Aplicación de Seguimiento de Ejercicio",
-      description: "Una aplicación móvil intuitiva para registrar entrenamientos, establecer metas y monitorear tu progreso físico.",
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600",
-      technologies: ["React Native", "Firebase", "Node.js", "JavaScript"],
-      developers: "Front Notrap, Problema Pereza",
-      gallery: [
-        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400",
-        "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400",
-        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400"
-      ]
+     title: "Proyecto en Desarrollo",
+      description: "Este proyecto está actualmente en desarrollo. ¡Pronto más información!",
+      image: "https://cdn.pixabay.com/photo/2017/08/04/05/37/coming-soon-2579123_1280.jpg",
+      technologies: ["Por definir"],
+      developers: "Alejo Mendizabal",
+      gallery: []
     },
     3: {
       title: "Proyecto en Desarrollo",
