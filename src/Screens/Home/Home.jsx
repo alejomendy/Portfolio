@@ -13,10 +13,10 @@ export default function Home() {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW4jeoGwEg75bRG24mFbBLgsv9nOU6dbI2eQ&s"
     },
     {
-      id: 2,
-      title: "Aplicación de Ejercicio",
-      description: "App móvil para seguimiento de entrenamientos y progreso físico.",
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600"
+      id: 3,
+      title: "Próximamente...",
+      description: "",
+      image: "https://cdn.pixabay.com/photo/2017/08/04/05/37/coming-soon-2579123_1280.jpg"
     },
     {
       id: 3,
