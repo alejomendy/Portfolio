@@ -19,7 +19,7 @@ export default function ProjectDetails() {
       developers: "Alejo Mendizabal",
       gallery: [homeview, characterview, detailview ],
       code: "https://github.com/alejomendy/Portfolio",
-      ver: ""
+      ver: "https://alejomendy.github.io/shinobi-data-react/"
     },
     2: {
      title: "Proyecto en Desarrollo",
