@@ -19,7 +19,8 @@ export default function ProjectDetails() {
       technologies: ["JavaScript", "React", "Node.js", "API REST"],
       developers: "Alejo Mendizabal",
       gallery: [homeview, characterview, detailview ],
-      code: "https://github.com/N-KILL/shinobi-data-react"
+      code: "https://github.com/alejomendy/shinobi-data-react",
+      ver : "https://shinobi-data-react.vercel.app/"
     },
     2: {
       title: "Aplicación de Seguimiento de Ejercicio",
