@@ -146,16 +146,16 @@ export default function ProjectDetails() {
           )}
         </div>
         <div className="action-buttons">
-         <Link to={project.ver}>
-            <button  className="primary-button">
+          <a href={project.ver} target="_blank" rel="noopener noreferrer">
+            <button className="primary-button">
               Ver
             </button>
-          </Link>
-          <Link to={project.code}>
-            <button  className="secondary-button">
+          </a>
+          <a href={project.code} target="_blank" rel="noopener noreferrer">
+            <button className="secondary-button">
               Ver Código
             </button>
-          </Link>
+          </a>
         </div>
         <div className="back-link">
           <Link to="/">← Volver al Portafolio</Link>
