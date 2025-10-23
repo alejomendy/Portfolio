@@ -146,17 +146,21 @@ export default function ProjectDetails() {
           )}
         </div>
         <div className="action-buttons">
-          <a href={project.ver} target="_blank" rel="noopener noreferrer">
-            <button className="primary-button">
-              Ver
-            </button>
-          </a>
-          <a href={project.code} target="_blank" rel="noopener noreferrer">
-            <button className="secondary-button">
-              Ver Código
-            </button>
-          </a>
+          <button
+            className="primary-button"
+            onClick={() => window.open(project.ver, '_blank', 'noopener,noreferrer')}
+          >
+            Ver
+          </button>
+
+          <button
+            className="secondary-button"
+            onClick={() => window.open(project.code, '_blank', 'noopener,noreferrer')}
+          >
+            Ver Código
+          </button>
         </div>
+
         <div className="back-link">
           <Link to="/">← Volver al Portafolio</Link>
         </div>
