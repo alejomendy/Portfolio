@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./Screens/Home/Home.jsx";
-import ProjectDetails from "./Screens/CardDetails/ProjectDetail.jsx"; // ajusta según tu ruta real
+import ProjectDetails from "./Screens/proyectdetail/ProjectDetail.jsx"; // ajusta según tu ruta real
 
 export default function App() {
   return (

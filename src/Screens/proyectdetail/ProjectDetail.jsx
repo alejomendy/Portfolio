@@ -148,7 +148,7 @@ export default function ProjectDetails() {
         <div className="action-buttons">
          <Link to={project.ver}>
             <button  className="primary-button">
-              Ver Código
+              Ver
             </button>
           </Link>
           <Link to={project.code}>
