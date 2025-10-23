@@ -13,13 +13,13 @@ export default function Home() {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW4jeoGwEg75bRG24mFbBLgsv9nOU6dbI2eQ&s"
     },
     {
-      id: 3,
+      id: 2, 
       title: "Próximamente...",
       description: "",
       image: "https://cdn.pixabay.com/photo/2017/08/04/05/37/coming-soon-2579123_1280.jpg"
     },
     {
-      id: 3,
+      id: 3, 
       title: "Próximamente...",
       description: "",
       image: "https://cdn.pixabay.com/photo/2017/08/04/05/37/coming-soon-2579123_1280.jpg"
@@ -30,15 +30,21 @@ export default function Home() {
     navigate(`/proyecto/${projectId}`);
   };
 
+  const handleNavClick = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="portfolio">
       <header className="header">
         <div className="logo">AM</div>
-
         <div className="glass-menu">
-          <a href="#about">Sobre mí</a>
-          <a href="#projects">Proyectos</a>
-          <a href="#contact">Contacto</a>
+          <div onClick={() => handleNavClick('about')} style={{ cursor: 'pointer' }}>Sobre mí</div>
+          <div onClick={() => handleNavClick('projects')} style={{ cursor: 'pointer' }}>Proyectos</div>
+          <div onClick={() => handleNavClick('contact')} style={{ cursor: 'pointer' }}>Contacto</div>
         </div>
       </header>
 
@@ -53,9 +59,7 @@ export default function Home() {
         </h1>
         <p>
           Desarrollador Full Stack con pasión por crear aplicaciones web fluidas,
-          intuitivas y de alto rendimiento. Me especializo en el ecosistema
-          JavaScript para construir experiencias de usuario memorables y
-          vanguardistas.
+          intuitivas y de alto rendimiento. 
         </p>
       </section>
 
@@ -90,7 +94,8 @@ export default function Home() {
               onClick={() => handleProjectClick(project.id)}
               style={{ cursor: 'pointer' }}
             >
-              <img src={project.image} alt={project.title} />
+
+              <img src={project.image} alt={project.title} /> 
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
@@ -103,7 +108,7 @@ export default function Home() {
         <p>
           Estoy disponible para nuevos proyectos y oportunidades. ¡Hablemos!
         </p>
-        <button>Contáctame</button>
+        <button onClick={() => handleNavClick('contact')}>Contáctame</button> 
       </section>
 
       <footer>© 2025 Alejo Mendizabal. Todos los derechos reservados.</footer>
