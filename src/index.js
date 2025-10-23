@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './app.jsx'; 
-import './Styles/index.css'; 
+import './Styles/main.css'; 
 
 const REPO_NAME = 'https://alejomendy.github.io/Portfolio'; 
 
