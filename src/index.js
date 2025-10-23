@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './app.jsx'; 
 import './Styles/index.css'; 
 
-const REPO_NAME = '/Portfolio'; 
+const REPO_NAME = 'https://alejomendy.github.io/Portfolio'; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
