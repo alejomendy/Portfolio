@@ -1,19 +1,16 @@
-// Ejemplo de cómo se vería tu archivo principal (ej. index.js)
-
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+// ... otros imports ...
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './app.jsx'; 
+// ...
 
-// Asume que el nombre de tu repositorio es 'Portfolio'
-// Si tu URL es: https://alejomendy.github.io/Portfolio/
+// 🚨 REEMPLAZA 'Portfolio' con el nombre exacto de tu repositorio.
+// Debe coincidir con el nombre de tu repositorio de GitHub.
 const PUBLIC_URL = 'https://alejomendy.github.io/Portfolio'; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter basename={PUBLIC_URL}> 
-      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
