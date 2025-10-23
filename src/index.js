@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// ...
+import { BrowserRouter } from 'react-router-dom';
+import App from './app.jsx'; 
+import './Styles/index.css'; 
 
-// 🚨 REEMPLAZA 'Portfolio' con el nombre exacto de tu repositorio.
-// Debe coincidir con el nombre de tu repositorio de GitHub.
-const PUBLIC_URL = 'https://alejomendy.github.io/Portfolio/'; 
+const REPO_NAME = '/Portfolio'; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter basename={PUBLIC_URL}> 
-    </BrowserRouter>
-  </React.StrictMode>
+   <React.StrictMode>
+   <BrowserRouter basename={REPO_NAME}> 
+       <App /> 
+   </BrowserRouter>
+   </React.StrictMode>
 );
